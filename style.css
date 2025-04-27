@@ -1,0 +1,160 @@
+*,
+*::after ,
+*::before{
+ box-sizing: border-box;   
+}
+body{
+    margin: 0;
+    font-size: 0.938rem;
+    background-color: hsl(233, 47%, 7%);
+}
+img{
+    width: 100%;
+}
+/* Typography */
+/* font-family: "Inter", sans-serif;
+font-family: "Lexend Deca", sans-serif; */
+.card-heading{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 100%);   
+}
+.accent-text{
+    color:hsl(277, 64%, 61%) ;
+}
+.main-text{
+    color: hsla(0, 0%, 100%,0.6);  
+    line-height: 1.7;
+    font-family: "Lexend Deca", sans-serif; 
+}
+/* Layout */
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: hsl(244, 38%, 16%);
+    max-width: 1200px;
+    border-radius: 5px;
+    margin: 0  1.25em;
+}
+.card-text{
+    text-align: center;
+    padding: 1em;
+}
+.card-img {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .card-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 64%, 61%);
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+    z-index: 2;
+  }
+  
+  .card-img img {
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+  
+.buisnesses{
+    font-family: "Inter", sans-serif;
+    margin-top: 2em;
+    color: hsla(0, 0%, 100%,0.5);   
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.buisnesses span{
+    font-size: 1.25rem;
+    color:hsl(0, 0%, 100%);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+@media (min-width:850px) {
+    body{
+        font-size: 1.25rem;
+    }
+    .card-heading{
+        font-size: 2.5rem;
+        color: hsl(0, 0%, 100%);   
+    }
+    /* Layout */
+    .card{
+        flex-direction: row;
+    }
+    .card-text{
+        order: -1;
+        text-align: left;
+        width: 50%;
+        padding: 2.5em;
+    }
+    .card-img {
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      
+      .card-img::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: hsl(277, 64%, 61%);
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+        z-index: 2;
+      }
+      
+      .card-img img {
+        width: 100%;
+        display: block;
+        height: auto;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+      }
+      
+    .buisnesses{
+        margin-top: 5em;
+        max-width: 400px;
+        font-size: 0.9rem;
+        gap:10px;
+        flex-direction: row;
+    }
+    .buisnesses span{
+        font-size: 1.75rem;
+        color:hsl(0, 0%, 100%);
+        font-weight: 700;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
